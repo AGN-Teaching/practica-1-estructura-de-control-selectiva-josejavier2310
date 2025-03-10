@@ -28,10 +28,35 @@ def calcular_sueldo_neto():
             isr = cuota_fija + ((sueldo_bruto - limite_inferior) * (porcentaje / 100))
             break
     # Descuentos
-    seguridad_social = sueldo_bruto * 0.025
-    caja_ahorro = sueldo_bruto * 0.03  # Se asume 3% por defecto
-    ahorro_solidario = sueldo_bruto * 0.01  # Se asume 1% por defecto
+    print("Opciones a eleguir")
+    print("1. Cuota Fija")
+    print("2. Cuota Porcentual")
+    seleccion = input("Eligue una opcion")
+    if seleccion == "1":
+        caja_ahorro = sueldo_bruto + 1000.00
+    elif seleccion == "2":
+        print("Cual de estos dos puntos")
+        print("1. El 3% del sueldo bruto mensual")
+        print("2. El 5% del sueldo bruto mensual")
+        punto = input("Elige uno de esos puntos")
+        if punto == "2":
+            seguridad_social = sueldo_bruto * 0.025
+        elif punto == "1":
+            caja_ahorro = sueldo_bruto * 0.03
     
+    #Pedimos al usuari que si quiere participar en el ahorro solidario
+    print(" Otras Opciones para eleguir")
+    print("1. No participar")
+    print("2. 1% Sueldo bruto mensual")
+    print("3. 2% del sueldo mensual")
+    opcion = input("Elie una opcion")
+    if opcion == "2":
+        ahorro_solidario = sueldo_bruto * 0.01
+    elif opcion == "3":
+        ahorro_solidario = sueldo_bruto * 0.02
+    else
+        ahorro_solidario = 0.00
+                   
     # Cálculo del sueldo neto
     sueldo_neto = sueldo_bruto - (isr + seguridad_social + caja_ahorro + ahorro_solidario)
     # Resultados
