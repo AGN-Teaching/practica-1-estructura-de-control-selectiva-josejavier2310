@@ -33,7 +33,7 @@ def calcular_sueldo_neto():
     print("2. Cuota Porcentual")
     seleccion = input("Eligue una opcion")
     if seleccion == "1":
-        caja_ahorro = sueldo_bruto + 1000.00
+        caja_ahorro = caja_ahorro + 1000.00
     elif seleccion == "2":
         print("Cual de estos dos puntos")
         print("1. El 3% del sueldo bruto mensual")
